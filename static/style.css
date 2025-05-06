@@ -1,23 +1,103 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body and Background */
 body {
-    background-color: #1a1a1a;
-    color: #00ff99;
-    font-family: monospace;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient */
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-}
-.container {
+    overflow: hidden;
     text-align: center;
-    border: 2px dashed #00ff99;
+}
+
+/* Main Container */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
     padding: 30px;
-    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
+
+/* Heading */
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
 }
-p {
+
+/* Curiosity Fact */
+.fact {
     font-size: 1.5em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out;
 }
+
+/* Button */
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #00ff99;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #00cc7a;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    margin-top: 30px;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .fact {
+        font-size: 1.3em;
+    }
+    button {
+        font-size: 1.1em;
+    }
+}
+

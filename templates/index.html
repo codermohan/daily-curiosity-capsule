@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Curiosity Capsule</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>💡 Daily Curiosity Capsule</h1>
-        <p>{{ curiosity }}</p>
+    <div class="wrapper">
+        <div class="content">
+            <h1>💡 Daily Curiosity Capsule</h1>
+            <p class="fact">{{ curiosity }}</p>
+            <button onclick="window.location.reload();">Get Another Curiosity</button>
+        </div>
+        <div class="footer">
+            <p>Made with ❤️ to spark your curiosity</p>
+        </div>
     </div>
 </body>
 </html>
+
