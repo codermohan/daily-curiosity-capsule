@@ -1,15 +1,16 @@
 from flask import Flask, render_template
 import datetime
 import hashlib
+import random
 
 app = Flask(__name__)
 
 def get_daily_curiosity():
     with open("curiosities.txt") as file:
         curiosities = file.readlines()
-    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
-    index = int(hashlib.md5(date_str.encode()).hexdigest(), 16) % len(curiosities)
-    return curiosities[index].strip()
+   # date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+   # index = int(hashlib.md5(date_str.encode()).hexdigest(), 16) % len(curiosities)
+    return random.choice(curiosities).strip()
 
 @app.route("/")
 def home():
